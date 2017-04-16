@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using SerHumano.Common.Models.Persons;
+using SerHumano.Common.Models.Security;
 
 namespace SerHumano.Repository.Data
 {
@@ -14,27 +13,36 @@ namespace SerHumano.Repository.Data
             // Look for any students.
             if (!context.PersonTypes.Any())
             {
-
-
                 context.PersonTypes.Add(new PersonType
-                {
-                    Id = 1,
+                {                    
                     Description = "Visitante"
                 });
                 context.PersonTypes.Add(new PersonType
-                {
-                    Id = 1,
+                {                 
                     Description = "Profissional"
                 });
                 context.PersonTypes.Add(new PersonType
-                {
-                    Id = 1,
+                {                    
                     Description = "Instituição"
                 });
                 context.PersonTypes.Add(new PersonType
-                {
-                    Id = 1,
+                {                   
                     Description = "Administrador"
+                });
+                context.SaveChanges();
+            }
+            if (!context.Users.Any())
+            {
+                context.Users.Add(new User
+                {
+                    Login = "ramon",
+                    Password = "ram17zl",
+                    Person = new Common.Models.Persons.Person
+                    {
+                        Cadastro = DateTime.Now,
+                        Name = "Ramon Quirino da Silva",
+                        PersonType = context.PersonTypes.First(x => x.Description == "Administrador")                       
+                    }
                 });
                 context.SaveChanges();
             }

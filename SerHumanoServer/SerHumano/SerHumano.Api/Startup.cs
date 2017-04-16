@@ -4,8 +4,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SerHumano.Application.Authentication;
+using SerHumano.Common.Applications.Authentication;
+using SerHumano.Common.Services.Person;
+using SerHumano.Common.Services.Security;
+using SerHumano.Domain.Repositories.Person;
+using SerHumano.Domain.Repositories.Security;
+using SerHumano.Domain.Services.Person;
+using SerHumano.Domain.Services.Security;
 using SerHumano.Repository;
 using SerHumano.Repository.Data;
+using SerHumano.Repository.Person;
+using SerHumano.Repository.Security;
 
 namespace SerHumano.Api
 {
@@ -35,13 +45,23 @@ namespace SerHumano.Api
         {
 
             services.AddDbContext<SerHumanoContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("SerHumanoConnection")));
 
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
 
+            //Aplication Injection
+            services.AddTransient<IAuthenticationApplication, AuthenticationApplication>();
+
+            //Services Injection
+            services.AddTransient<IPersonService, PersonService>();
+            services.AddTransient<IUserService, UserService>();
+
+            //Repository injection
+            services.AddTransient<IPersonRepository, PersonRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
         }
 
@@ -56,6 +76,7 @@ namespace SerHumano.Api
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
+
 
             DbInitializer.Initialize(context);
         }

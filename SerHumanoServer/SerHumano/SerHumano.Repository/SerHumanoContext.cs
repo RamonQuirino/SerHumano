@@ -10,7 +10,7 @@ namespace SerHumano.Repository
         {
         }
 
-        public DbSet<Person> Persons{ get; set; }
+        public DbSet<Common.Models.Persons.Person> Persons{ get; set; }
         public DbSet<PersonType> PersonTypes { get; set; }
         public DbSet<User> Users { get; set; }
         
@@ -18,7 +18,7 @@ namespace SerHumano.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PersonType>().ToTable("PersonType");
-            modelBuilder.Entity<Person>().ToTable("Person");
+            modelBuilder.Entity<Common.Models.Persons.Person>().ToTable("Person");
             modelBuilder.Entity<User>().ToTable("User");            
         }
     }
