@@ -20,5 +20,10 @@ namespace SerHumano.Application.Authentication
         {
             return _userService.GetByLogin(login);
         }
+
+        public User GetByLoginAndPass(string login, string pass)
+        {
+            return _userService.GetByLoginAndPass(login, pass);
+        }
     }
 }

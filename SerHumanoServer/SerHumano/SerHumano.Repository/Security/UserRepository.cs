@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using SerHumano.Common.Models.Security;
 using SerHumano.Domain.Repositories.Security;
 
@@ -15,5 +16,11 @@ namespace SerHumano.Repository.Security
         {
             return Context.Users.FirstOrDefault(x => x.Login == login);
         }
+
+        public User GetByLoginAndPass(string login, string pass)
+        {
+            return Context.Users.FirstOrDefault(x => x.Login == login && x.Password == pass);                       
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SerHumano.Common.Models.Persons;
 using SerHumano.Common.Models.Security;
+using SerHumano.Common.Services.Security;
 
 namespace SerHumano.Repository
 {
@@ -13,13 +14,14 @@ namespace SerHumano.Repository
         public DbSet<Common.Models.Persons.Person> Persons{ get; set; }
         public DbSet<PersonType> PersonTypes { get; set; }
         public DbSet<User> Users { get; set; }
-        
+        public DbSet<UserAccessToken> UserAccessTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PersonType>().ToTable("PersonType");
             modelBuilder.Entity<Common.Models.Persons.Person>().ToTable("Person");
-            modelBuilder.Entity<User>().ToTable("User");            
+            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<UserAccessToken>().ToTable("UserAccessToken");
         }
     }
 }

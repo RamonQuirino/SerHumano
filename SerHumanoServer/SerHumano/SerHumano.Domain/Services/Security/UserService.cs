@@ -17,5 +17,10 @@ namespace SerHumano.Domain.Services.Security
         {
             return _userRepository.GetByLogin(login);
         }
+
+        public User GetByLoginAndPass(string login, string pass)
+        {
+            return _userRepository.GetByLoginAndPass(login, pass);
+        }
     }
 }
