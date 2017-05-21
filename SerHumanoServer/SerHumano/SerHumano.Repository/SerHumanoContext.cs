@@ -15,6 +15,8 @@ namespace SerHumano.Repository
         public DbSet<PersonType> PersonTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserAccessToken> UserAccessTokens { get; set; }
+        public DbSet<Access> Accesses { get; set; }
+        public DbSet<Menu> Menus { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +24,8 @@ namespace SerHumano.Repository
             modelBuilder.Entity<Common.Models.Persons.Person>().ToTable("Person");
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<UserAccessToken>().ToTable("UserAccessToken");
+            modelBuilder.Entity<Access>().ToTable("Access");
+            modelBuilder.Entity<Menu>().ToTable("Menu");
         }
     }
 }

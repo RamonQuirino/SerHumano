@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MySQL.Data.EntityFrameworkCore.Extensions;
 using SerHumano.Application.Authentication;
 using SerHumano.Common.Applications.Authentication;
 using SerHumano.Common.Services.Person;
@@ -45,7 +46,7 @@ namespace SerHumano.Api
         {
 
             services.AddDbContext<SerHumanoContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("SerHumanoConnection")));
+                options.UseMySQL(Configuration.GetConnectionString("SerHumanoConnection")));
 
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);

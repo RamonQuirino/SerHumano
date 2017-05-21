@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SerHumano.Api", "SerHumano.Api\SerHumano.Api.xproj", "{6987FD07-312C-4FCF-AC2E-F56B1584B5AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerHumano.Api", "SerHumano.Api\SerHumano.Api.csproj", "{6987FD07-312C-4FCF-AC2E-F56B1584B5AB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SerHumano.Common", "SerHumano.Common\SerHumano.Common.xproj", "{6D6A8E7A-9C86-4A7F-BA57-8E170EFCEFD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerHumano.Common", "SerHumano.Common\SerHumano.Common.csproj", "{6D6A8E7A-9C86-4A7F-BA57-8E170EFCEFD7}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SerHumano.Domain", "SerHumano.Domain\SerHumano.Domain.xproj", "{6AC9E870-27B5-40A6-B140-E9AED5B32A8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerHumano.Domain", "SerHumano.Domain\SerHumano.Domain.csproj", "{6AC9E870-27B5-40A6-B140-E9AED5B32A8E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SerHumano.Repository", "SerHumano.Repository\SerHumano.Repository.xproj", "{0BA9A038-C473-4B48-95AB-8D1CCF593B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerHumano.Repository", "SerHumano.Repository\SerHumano.Repository.csproj", "{0BA9A038-C473-4B48-95AB-8D1CCF593B2F}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SerHumano.Application", "SerHumano.Application\SerHumano.Application.xproj", "{F5ACC117-5204-45EC-B750-C0AC7C1A09CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerHumano.Application", "SerHumano.Application\SerHumano.Application.csproj", "{F5ACC117-5204-45EC-B750-C0AC7C1A09CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,6 +15,5 @@ namespace SerHumano.Common.Models.Security
         public string Login { get; set; }
         public string Password { get; set; }
         public ICollection<UserAccessToken> Tokens { get; set; }
-
     }
 }
