@@ -12,7 +12,7 @@ namespace SerHumano.Common.Models.Security
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public Person Person { get; set; }
-        public string Login { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public ICollection<UserAccessToken> Tokens { get; set; }
     }

@@ -13,12 +13,12 @@ namespace SerHumano.Repository.Security
 
         public User GetByLogin(string login)
         {
-            return Context.Users.FirstOrDefault(x => x.Login == login);
+            return Context.Users.FirstOrDefault(x => x.Email == login);
         }
 
         public User GetByLoginAndPass(string login, string pass)
         {
-            return Context.Users.FirstOrDefault(x => x.Login == login && x.Password == pass);                       
+            return Context.Users.FirstOrDefault(x => x.Email == login && x.Password == pass);                       
         }
 
     }

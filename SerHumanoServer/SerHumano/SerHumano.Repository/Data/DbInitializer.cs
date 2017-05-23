@@ -35,7 +35,7 @@ namespace SerHumano.Repository.Data
             {
                 context.Users.Add(new User
                 {
-                    Login = "ramon",
+                    Email= "ramon.ti@hotmail.com",
                     Password = "ram17zl",
                     Person = new Common.Models.Persons.Person
                     {

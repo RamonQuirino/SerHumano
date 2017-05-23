@@ -1,0 +1,17 @@
+{
+  "name": "asp.net",
+  "private": true,    
+  "dependencies": {
+    "gulp": "3.9.1",
+    "font-awesome": "4.7.0",
+    "jquery": "*",
+    "jquery-validation": "1.16.0",
+    "jquery-validation-unobtrusive": "3.2.6",
+    "materialize": "*",
+    "prism": "1.6.0",
+    "perfect-scrollbar": "0.7.0"
+  },
+  "resolutions": {
+    "jquery-validation": "1.16.0"
+  }
+}

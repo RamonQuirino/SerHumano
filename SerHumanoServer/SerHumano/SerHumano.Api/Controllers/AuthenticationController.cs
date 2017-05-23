@@ -5,7 +5,7 @@ using SerHumano.Common.Models.Security;
 namespace SerHumano.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class AuthenticationController: Controller
+    public class AuthenticationController : Controller
     {
         private readonly IAuthenticationApplication _authenticationApplication;
         public AuthenticationController(IAuthenticationApplication authenticationApplication)
@@ -16,7 +16,13 @@ namespace SerHumano.Api.Controllers
         [HttpGet]
         public User Get()
         {
-            return  _authenticationApplication.GetByLogin("ramon");            
+            return _authenticationApplication.GetByLogin("ramon");
+        }
+
+        [HttpPost]
+        public User LoginUser(string username, string password)
+        {
+            return _authenticationApplication.GetByLogin("ramon");
         }
     }
 }

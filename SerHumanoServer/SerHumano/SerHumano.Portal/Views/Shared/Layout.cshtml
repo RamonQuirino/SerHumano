@@ -1,0 +1,54 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SerHumano.Portal</title>
+
+    <link href="~/lib/materialize/dist/css/materialize.css" rel="stylesheet" />
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <link href="~/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+</head>
+
+<body class="cyan loaded">
+<!-- Start Page Loading -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- End Page Loading -->
+
+<div id="page-content" class="row">
+    <div class="body-content">
+        @RenderBody()
+    </div>
+</div>
+
+
+
+<!-- ================================================
+Scripts
+================================================ -->
+<!-- jQuery Library -->
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<!--materialize js-->
+<script src="~/lib/materialize/dist/js/materialize.js"></script>
+
+<!--prism-->
+<script src="~/lib/prism/prism.js"></script>
+
+<!--scrollbar-->
+<script src="~/lib/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+
+<script src="~/js/Site.js"></script>
+
+@RenderSection("scripts", required: false)
+
+<div class="hiddendiv common"></div>
+</body>
+
+
+</html>
